@@ -1,0 +1,105 @@
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: url('https://img4.qy0.ru/data/1584/29/110.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    text-size-adjust: 100%;
+}
+.form {
+    width: 360px;
+    min-height: 100px;
+    padding: 32px 24px;
+    text-align: center;
+    background: #636d77;
+    opacity: 0.6;
+    border-radius: 2px;
+    margin: 24px;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+    .logo {
+        width: 250px;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+
+    .form-group {
+        display: flex;
+        margin-bottom: 16px;
+        flex-direction: column;
+    }
+    .form-label,
+    .form-message {
+        text-align: left;
+    }
+    .form-label {
+        font-weight: 700;
+        padding-bottom: 6px;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+    }
+    .form-message {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        padding: 4px 0 0;
+    }
+    .form-control {
+        height: 40px;
+        padding: 8px 12px;
+        border: 1px solid #b3b3b3;
+        border-radius: 3px;
+        outline: none;
+        font-size: 1.4rem;
+        &:hover {
+            border-color: #1dbfaf;
+        }
+    }
+
+    .form-radio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .form-submit {
+        outline: none;
+        background-color: #1dbfaf;
+        margin-top: 12px;
+        padding: 12px 16px;
+        font-weight: 600;
+        color: #fff;
+        border: none;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+            background-color: #1ac7b6;
+        }
+    }
+    .spacer {
+        margin-top: 36px;
+    }
+    .singin {
+        display: flex;
+        margin-top: 10px;
+        color: white;
+        justify-content: center;
+        background-color: black;
+        outline: none;
+        padding: 12px 16px;
+        font-weight: 600;
+        border: none;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(59, 50, 50);
+        }
+    }
+}

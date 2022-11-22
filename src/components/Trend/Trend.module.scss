@@ -1,0 +1,110 @@
+.container {
+    position: relative;
+    padding: 5px 5px 0;
+    width: calc(var(--default-layout-width) / 100 * 60);
+    height: var(--Trend-slider-height);
+    border-radius: 10px;
+    // background-color: rgb(12, 12, 12);
+    overflow: hidden;
+
+    .slided {
+        display: grid;
+        grid-template-columns: repeat(10, calc(var(--default-layout-width) / 100 * 60));
+        gap: 2px;
+        transition: all 0.2s linear;
+        user-select: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        border-radius: 10px;
+        scroll-behavior: smooth;
+        height: var(--Trend-slider-height);
+        &::-webkit-scrollbar {
+            border-radius: 0;
+            height: 4px;
+        }
+        &:hover .item {
+            opacity: 0.5;
+        }
+        .item {
+            transform: scale(1);
+            height: var(--Trend-slider-height);
+            transition: all 0.2s linear;
+            user-select: none;
+            overflow: hidden;
+            border-radius: 6px;
+            transform: center left;
+            position: relative;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+                z-index: 8;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .name {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 18px;
+                color: azure;
+                padding: 4px;
+                text-align: center;
+                font-size: 14px;
+                background-color: rgba(0, 0, 0, 0.09);
+            }
+        }
+    }
+    .btnLeft {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        z-index: 8;
+        transform-origin: center;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        border-radius: 99px;
+        display: flex;
+        align-items: center;
+        transform: translateY(-20%);
+        overflow: hidden;
+        &:hover svg {
+            background-color: aliceblue;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 30px;
+            transition: alt 0.2s linear;
+        }
+    }
+    .btnRigth {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        z-index: 8;
+        transform-origin: center;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        border-radius: 99px;
+        display: flex;
+        align-items: center;
+        transform: translateY(20%);
+        overflow: hidden;
+        &:hover svg {
+            background-color: aliceblue;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        svg {
+            opacity: 0.7;
+            font-size: 30px;
+            transition: alt 0.2s linear;
+        }
+    }
+}
